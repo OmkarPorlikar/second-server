@@ -105,7 +105,7 @@ router.get('/auth/google', cors(), (req, res, next) => {
 router.get(
   '/auth/google/callback',
   passport.authenticate('google', {
-    failureRedirect: 'https://blog-client-side.vercel.app/',
+    failureRedirect: 'https://wander-world-blog.vercel.app/',
   }),
   (req, res) => {
     // Extract relevant user data
@@ -125,7 +125,7 @@ router.get(
     // Redirect to home page with sanitized user data in query parameters
     const userData = JSON.stringify({token , tokenObject});
     console.log(userData, "bapu user")
-    res.redirect(`https://blog-client-side.vercel.app?user=${encodeURIComponent(userData)}`);
+    res.redirect(`https://wander-world-blog.vercel.app/?user=${encodeURIComponent(userData)}`);
   }
 );
 
