@@ -9,7 +9,7 @@ passport.use(
     {
       clientID: '923593978068-5spdgkfqr883a38d3sp5do7qh2mqltf1.apps.googleusercontent.com',
       clientSecret: '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',
-      callbackURL: 'http://localhost:9080/api/auth/google/callback',
+      callbackURL: "https://second-server-blog.vercel.app/api/auth/google/callback",
       scope: ['profile', 'email'],
     },
     async (accessToken, refreshToken, profile, done) => {
